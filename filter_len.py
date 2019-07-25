@@ -12,7 +12,9 @@ def read_fq(in_fa,length,name):
     for record in SeqIO.parse(in_fa,'fasta'):
       seq_len = len(record.seq)
       if seq_len >= length:
-        fh.write(">%s\n%s\n" % (record.id,record.seq))
+        fh.write(">%s\n%s\n" % (record.id,record.seq)) 
+        # You don't have to create a dictionary because it takes up so much memory on the server, 
+        # it consume less memory to output the results directly to the file
       else:
         continue
 
