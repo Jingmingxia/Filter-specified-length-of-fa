@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#by xjm
 
 import sys
 import logging
@@ -14,7 +15,7 @@ def read_fq(in_fa,length,name):
       if seq_len >= length:
         fh.write(">%s\n%s\n" % (record.id,record.seq)) 
         # You don't have to create a dictionary because it takes up so much memory on the server, 
-        # it consume less memory to output the results directly to the file
+        # it consume less memory to output the results directly to the file in this way
       else:
         continue
 
